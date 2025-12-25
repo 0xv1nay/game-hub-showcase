@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About - Arcadia | Retro Arcade Game Collection</title>
+  <meta name="description" content="Learn about Arcadia, your destination for classic retro arcade games. Our mission, story, and contact information." />
+  <meta name="keywords" content="about arcadia, retro games, arcade games history, contact" />
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            display: ['Orbitron', 'sans-serif'],
+            body: ['Inter', 'sans-serif'],
+          },
+          colors: {
+            neon: {
+              cyan: '#00f5ff',
+              pink: '#ff00ff',
+              purple: '#8b5cf6',
+              green: '#00ff88',
+            },
+            arcade: {
+              dark: '#0a0a0f',
+              darker: '#050508',
+              card: '#12121a',
+              border: '#1f1f2e',
+            }
+          }
+        }
+      }
+    }
+  </script>
+  
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(135deg, #0a0a0f 0%, #1a1a2e 50%, #0a0a0f 100%);
+      min-height: 100vh;
+    }
+    
+    .font-display {
+      font-family: 'Orbitron', sans-serif;
+    }
+    
+    .gradient-text {
+      background: linear-gradient(135deg, #00f5ff 0%, #8b5cf6 50%, #ff00ff 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    
+    .pulse-glow {
+      animation: pulse-glow 2s ease-in-out infinite;
+    }
+    
+    @keyframes pulse-glow {
+      0%, 100% { box-shadow: 0 0 20px rgba(0, 245, 255, 0.4); }
+      50% { box-shadow: 0 0 40px rgba(0, 245, 255, 0.8); }
+    }
+    
+    .game-card {
+      background: linear-gradient(145deg, #12121a 0%, #1a1a2e 100%);
+      border: 1px solid #1f1f2e;
+      transition: all 0.3s ease;
+    }
+    
+    .game-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 10px 30px rgba(0, 245, 255, 0.15);
+      border-color: #00f5ff;
+    }
+    
+    .fade-in {
+      animation: fadeIn 0.5s ease-out;
+    }
+    
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    
+    ::-webkit-scrollbar-track {
+      background: #0a0a0f;
+    }
+    
+    ::-webkit-scrollbar-thumb {
+      background: linear-gradient(180deg, #00f5ff, #8b5cf6);
+      border-radius: 4px;
+    }
+  </style>
+</head>
+<body class="text-gray-100">
+  
+  <!-- Header -->
+  <header class="sticky top-0 z-50 backdrop-blur-xl bg-arcade-darker/80 border-b border-arcade-border">
+    <div class="container mx-auto px-4 py-4">
+      <div class="flex items-center justify-between gap-4 flex-wrap">
+        <a href="index.html" class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-neon-cyan to-neon-purple flex items-center justify-center pulse-glow">
+            <span class="font-display font-bold text-arcade-dark text-lg">A</span>
+          </div>
+          <span class="font-display text-2xl font-bold gradient-text">ARCADIA</span>
+        </a>
+        
+        <nav class="flex items-center gap-6">
+          <a href="index.html" class="text-gray-300 hover:text-neon-cyan transition-colors font-medium">Home</a>
+          <a href="about.html" class="text-neon-cyan font-medium">About</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="relative py-20 overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-b from-neon-purple/10 via-transparent to-transparent"></div>
+    <div class="absolute top-20 left-10 w-72 h-72 bg-neon-cyan/20 rounded-full blur-3xl"></div>
+    <div class="absolute bottom-10 right-10 w-96 h-96 bg-neon-purple/20 rounded-full blur-3xl"></div>
+    
+    <div class="container mx-auto px-4 text-center relative z-10">
+      <h1 class="font-display text-5xl md:text-6xl font-bold mb-6 fade-in">
+        <span class="gradient-text">ABOUT</span>
+        <span class="text-gray-100"> ARCADIA</span>
+      </h1>
+      <p class="text-xl text-gray-400 max-w-2xl mx-auto fade-in">
+        Preserving the golden age of arcade gaming, one pixel at a time.
+      </p>
+    </div>
+  </section>
+
+  <!-- Our Story -->
+  <section class="py-16">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto">
+        <div class="game-card rounded-2xl p-8 md:p-12 mb-12">
+          <div class="flex items-center gap-3 mb-6">
+            <svg class="w-8 h-8 text-neon-cyan" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+            </svg>
+            <h2 class="font-display text-2xl font-bold text-gray-100">OUR STORY</h2>
+          </div>
+          <div class="space-y-4 text-gray-300 leading-relaxed">
+            <p>
+              Arcadia was born from a simple passion: the love of classic arcade games. In an era of hyper-realistic graphics and complex gameplay mechanics, we believe there's still magic in the simplicity of retro gaming.
+            </p>
+            <p>
+              Our journey began when a group of gaming enthusiasts decided to create a platform where anyone could experience the joy of classic arcade games without the hassle of downloads, installations, or subscriptions.
+            </p>
+            <p>
+              Today, Arcadia hosts a carefully curated collection of timeless classics – from the block-stacking perfection of Tetris to the maze-running excitement of Pac-Man. Each game has been lovingly adapted to work seamlessly in modern browsers while preserving the authentic feel of the originals.
+            </p>
+          </div>
+        </div>
+
+        <!-- Mission -->
+        <div class="game-card rounded-2xl p-8 md:p-12 mb-12">
+          <div class="flex items-center gap-3 mb-6">
+            <svg class="w-8 h-8 text-neon-purple" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
+            </svg>
+            <h2 class="font-display text-2xl font-bold text-gray-100">OUR MISSION</h2>
+          </div>
+          <p class="text-gray-300 leading-relaxed mb-6">
+            We're on a mission to preserve gaming history and make it accessible to everyone. Our goals are simple:
+          </p>
+          <ul class="space-y-3">
+            <li class="flex items-start gap-3">
+              <svg class="w-6 h-6 text-neon-green mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+              </svg>
+              <span class="text-gray-300">Keep classic games alive and accessible for future generations</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <svg class="w-6 h-6 text-neon-green mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+              </svg>
+              <span class="text-gray-300">Provide a free, ad-free gaming experience for all</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <svg class="w-6 h-6 text-neon-green mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+              </svg>
+              <span class="text-gray-300">Celebrate the artistry and innovation of early game developers</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <svg class="w-6 h-6 text-neon-green mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+              </svg>
+              <span class="text-gray-300">Build a community of retro gaming enthusiasts</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Stats -->
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
+          <div class="game-card rounded-xl p-6 text-center">
+            <div class="font-display text-3xl font-bold text-neon-cyan mb-1">8+</div>
+            <div class="text-gray-400 text-sm">Classic Games</div>
+          </div>
+          <div class="game-card rounded-xl p-6 text-center">
+            <div class="font-display text-3xl font-bold text-neon-purple mb-1">100%</div>
+            <div class="text-gray-400 text-sm">Free Forever</div>
+          </div>
+          <div class="game-card rounded-xl p-6 text-center">
+            <div class="font-display text-3xl font-bold text-neon-green mb-1">0</div>
+            <div class="text-gray-400 text-sm">Ads or Tracking</div>
+          </div>
+          <div class="game-card rounded-xl p-6 text-center">
+            <div class="font-display text-3xl font-bold text-neon-pink mb-1">∞</div>
+            <div class="text-gray-400 text-sm">Fun Guaranteed</div>
+          </div>
+        </div>
+
+        <!-- Contact Section -->
+        <div id="contact" class="game-card rounded-2xl p-8 md:p-12 mb-12">
+          <div class="flex items-center gap-3 mb-6">
+            <svg class="w-8 h-8 text-neon-cyan" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+            </svg>
+            <h2 class="font-display text-2xl font-bold text-gray-100">CONTACT US</h2>
+          </div>
+          <p class="text-gray-300 mb-6">
+            Have a question, suggestion, or just want to say hi? We'd love to hear from you!
+          </p>
+          <div class="flex flex-wrap gap-4">
+            <a href="mailto:hello@arcadia.games" class="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-display font-semibold bg-gradient-to-r from-neon-cyan to-neon-purple text-arcade-dark hover:shadow-lg hover:shadow-neon-cyan/50 transition-all duration-300">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+              </svg>
+              Email Us
+            </a>
+            <a href="https://github.com" target="_blank" class="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-display font-semibold border-2 border-neon-purple text-neon-purple hover:bg-neon-purple hover:text-arcade-dark transition-all duration-300">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+              </svg>
+              GitHub
+            </a>
+          </div>
+        </div>
+
+        <!-- Privacy Section -->
+        <div id="privacy" class="game-card rounded-2xl p-8 md:p-12">
+          <div class="flex items-center gap-3 mb-6">
+            <svg class="w-8 h-8 text-neon-green" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+            </svg>
+            <h2 class="font-display text-2xl font-bold text-gray-100">PRIVACY</h2>
+          </div>
+          <div class="space-y-4 text-gray-300">
+            <p>
+              Your privacy matters to us. Here's what you need to know:
+            </p>
+            <ul class="space-y-2">
+              <li class="flex items-start gap-2">
+                <span class="text-neon-green">•</span>
+                <span>We don't collect any personal information</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-neon-green">•</span>
+                <span>We don't use cookies or tracking technologies</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-neon-green">•</span>
+                <span>We don't show advertisements</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-neon-green">•</span>
+                <span>All games run locally in your browser</span>
+              </li>
+            </ul>
+            <p class="text-gray-400 text-sm mt-4">
+              Last updated: December 2024
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="border-t border-arcade-border bg-arcade-darker/50 py-12">
+    <div class="container mx-auto px-4">
+      <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+        <div class="flex items-center gap-3">
+          <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-neon-cyan to-neon-purple flex items-center justify-center">
+            <span class="font-display font-bold text-arcade-dark text-sm">A</span>
+          </div>
+          <span class="font-display text-xl font-bold gradient-text">ARCADIA</span>
+        </div>
+        <p class="text-gray-500 text-sm">© 2024 Arcadia. All games are property of their respective owners.</p>
+        <div class="flex gap-4">
+          <a href="about.html" class="text-gray-400 hover:text-neon-cyan transition-colors">About</a>
+          <a href="about.html#contact" class="text-gray-400 hover:text-neon-cyan transition-colors">Contact</a>
+          <a href="about.html#privacy" class="text-gray-400 hover:text-neon-cyan transition-colors">Privacy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

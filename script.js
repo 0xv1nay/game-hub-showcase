@@ -149,10 +149,11 @@ function createGameCard(game, isFeatured = false) {
   `;
 }
 
-// Render featured games
+// Render featured games (limit to 3)
 function renderFeaturedGames() {
   const container = document.getElementById('featuredGames');
-  const featuredGames = games.filter(game => game.featured);
+  if (!container) return;
+  const featuredGames = games.filter(game => game.featured).slice(0, 3);
   container.innerHTML = featuredGames.map(game => createGameCard(game, true)).join('');
 }
 
